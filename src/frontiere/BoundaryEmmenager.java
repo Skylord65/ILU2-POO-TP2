@@ -27,11 +27,11 @@ public class BoundaryEmmenager {
 					break;
 
 				case 2:
-					//TODO a completer
 					System.out.println("Bienvenue vilageois " + nomVisiteur);
 					StringBuilder questionForce = new StringBuilder();
-					questionForce.append(nomVisiteur)
-					int force = Clavier.entrerEntier();
+					questionForce.append("Quel est votre force ?");
+					int force = Clavier.entrerEntier(questionForce.toString());
+					controlEmmenager.ajouterGaulois(nomVisiteur, force);
 					break;
 
 				default:
@@ -53,7 +53,7 @@ public class BoundaryEmmenager {
 		int effetPotionMax = -1;
 		int effetPotionMin = -1;
 		do {
-			questionForceMin.append("Quelle est la force de potion la plus forte que vous produisez ?");
+			questionForceMin.append("Quelle est la force de potion la moins forte que vous produisez ?");
 			effetPotionMin = Clavier.entrerEntier(questionForceMin.toString());
 			questionForceMax.append("Quelle est la force de potion la plus forte que vous produisez ?");
 			effetPotionMax = Clavier.entrerEntier(questionForceMax.toString());
