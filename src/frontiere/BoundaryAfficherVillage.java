@@ -24,6 +24,7 @@ public class BoundaryAfficherVillage {
 			for (int i = 1; i < donneesVillage.length; i++) {
 				String gaulois = donneesVillage[i];
 				System.out.println("- " + gaulois);
+				//TODO: faire avec StringBuilder
 			}
 		} else {
 			System.out.println(
