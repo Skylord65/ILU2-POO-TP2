@@ -30,6 +30,7 @@ public class ControlLibererEtal {
 		Etal etalVendeur = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
 		if(etalVendeur!=null) {	
 			donneesEtal = etalVendeur.etatEtal();
+			etalVendeur.libererEtal();
 		}
 		return donneesEtal;
 	}
